@@ -1,12 +1,13 @@
 
 
 body {
-    direction: ltr;
     margin: 4.5rem 0 0 0;
     font-family: 'Righteous', cursive;
     font-weight: 500;
     background-color: antiquewhite;
     color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -33,7 +34,6 @@ body {
     font-size: 2rem;
     font-weight: 700;
     color: #c3195d;
-    text-transform: capitalize;
     text-decoration: none;
     font-family: 'Calligraffitti', cursive;
 }
@@ -45,6 +45,7 @@ body {
 .nav-list {
     list-style: none;
     display: flex;
+    gap: 10px;
 }
 
 .nav.item {
@@ -83,7 +84,18 @@ body {
     transform: translateY(-100%);
 }
 
-.photos, .location, .gifts, .contact, .thanks {
+.photos {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    color: #c3195d;
+    border-top: 3px #c3195d;
+}
+
+
+.location, .gifts, .contact, .thanks {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -118,6 +130,28 @@ body {
 .oge, .tobe {
     border-radius: 50px;
     border: 2px solid #c3195d;
+    width: 400px;
+    margin: 30px 10px;
+    font-size: 30px;
+    padding: 30px;
+    height: 290px;
+    transition:  .6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: white;
+}
+
+.vowName {
+    font-weight: 800;
+    font-size: 50px;
+}
+.oge:hover, .tobe:hover {
+    cursor: pointer;
+    margin: 50px;
+    background-color: white;
 }
 
 section:nth-of-type(even) {
@@ -169,6 +203,10 @@ section:nth-of-type(even) {
     overflow: hidden;
     white-space: nowrap;
     scroll-behavior: smooth;
+    border-top:solid 6px #c3195d;
+    border-bottom:solid 6px #c3195d;
+    padding: 50px;
+    margin: 100px;
 }
 
 .carousel.dragging {
@@ -180,16 +218,25 @@ section:nth-of-type(even) {
     pointer-events: none;
 }
 
-.carousel img {
-    height: 340px;
+img {
+    height: 500px;
     object-fit: cover;
     user-select: none;
-    margin-left: 14px;
-    width: calc(100% / 3);
+    margin: 10px;
+    width: 500px;
 }
+
 
 .carousel img:first-child {
     margin-left: 0px;
+}
+
+.vow {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;
+    gap: 10px;
 }
 
 @media screen and (max-width: 900px) {
@@ -198,18 +245,105 @@ section:nth-of-type(even) {
     }
 }
 
-@media screen and (max-width: 550px) {
-    .carousel img {
+@media screen and (min-width: 300px) and (max-width: 490px) {
+    body {
         width: 100%;
     }
-}
+    .header {
+        display: flex;
+        flex-direction: row;
+        height: 250px;
+    }
+    
+    .header-container {
+      flex-direction: row;
+      margin: 5px;
+      margin: 1px;
+      width: fit-content;
+    }
+    
+    .header-logo a {
+        font-size: 1.8rem;
+        width: 200px;
+        margin: 0 10px;
+    }
+    .carousel img {
+        width: calc(100% / 2);
+    }
+    .nav-menu {
+        float:none;
+        display: flex;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .section-couple {
+        width: 100%;
+        margin: 150px 6px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.footer {
-    text-align: center;
-    display: block;
-}
+    .location, .gifts, .contact, .thanks {
+       flex-direction: column;
+        font-size: 4rem;
+        width: 100%;
+        background-color: white;
+        padding: 5px;
+        align-items: flex-start;
+    }
 
-.footer a {
-    text-decoration: none;
-    color: #581731;
+    .join {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .celebrate {
+        font-size: 2.7rem;
+        font-family: 'Lumanosimo', cursive;
+    }
+    
+    .holy {
+        font-size: 2.5rem;
+        font-family: 'Calligraffitti', cursive;
+    }
+
+    .vow {
+        flex-direction: column;
+    }
+   .oge, .tobe {
+        width: 320px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .wrapper {
+        width: 100%;
+
+    }
+    .wrapper i{
+        margin: 30px;
+    }
+
+   
+    .carousel img {
+        height: 300px;
+        width: calc(100%/ 1);
+    }
+    
+    .wrapper .carousel {
+        height: 300px;
+        margin: 1px;
+        width: 100%;
+    }
+    .photos {
+        padding: 20px 3px;
+        height: 400px;
+        width: 100%;
+    }
 }
