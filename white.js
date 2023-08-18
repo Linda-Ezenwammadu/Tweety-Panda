@@ -90,3 +90,47 @@ carousel.addEventListener("touchmove", dragging);
 
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("touchend", dragStop);
+
+// Message slideshow
+let currentIndex = 0;
+const sender = document.querySelector('.sender');
+const message = document.querySelector('.theMessage');
+let prev = document.querySelector('.prev');
+let next = document.querySelector('.next');
+
+const messages = [
+    {
+        sender: "OgeLinda",
+        message: "Happy married life"
+    },
+    {
+        sender: "TobeChukwu",
+        message: "Enjoy your new home"
+    },
+    {
+        sender: "ToChukwu",
+        message: `Congratulations on your wedding day! May your journey together be filled with love, joy, 
+                and endless laughter. As you embark on this new chapter of your lives, 
+                may your love continue to grow stronger with each passing day. May your days be filled with shared dreams, 
+                cherished moments, and unwavering support for one another. Here's to a lifetime of happiness, love, 
+                and beautiful memories. Cheers to the newlyweds!`
+    }
+];
+
+sender.textContent = messages[0].sender;
+message.textContent = messages[0].message;
+
+const showMessage = (index) => {
+    sender.textContent = messages[index].sender;
+    message.textContent = messages[index].message;
+}
+
+// Next/previous controls
+const slideControl = (n) => {
+    currentIndex >= messages.length - 2 ? next.style.display = 'none' : next.style.display = 'block';
+    currentIndex <=  0? prev.style.display = 'none' : prev.style.display = 'block';
+    showMessage(currentIndex += n);   
+    console.log(currentIndex) 
+  }
+
+showMessage()

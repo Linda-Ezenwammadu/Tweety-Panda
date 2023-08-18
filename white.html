@@ -98,7 +98,7 @@
 
     <section id="photos" class="photos">
         <div class="wrapper">
-            <i id="left" class="fa-solid fa-angle-left"></i>
+            <i id="left" class="fa-solid fa-angle-left">&#10094;</i>
             <div class="carousel">
                 <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/090/089/original/1.jpg?1689453918"
                     alt="img" draggable="false">
@@ -119,12 +119,12 @@
                 <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/090/101/original/my_Goat.jpg?1689454826"
                     alt="img" draggable="false">
             </div>
-            <i id="right" class="fa-solid fa-angle-right"></i>
+            <i id="right" class="fa-solid fa-angle-right">&#10095;</i>
     </section>
 
     <section id="gifts" class="gifts">
        <section class="section-title">Gifts</section> 
-        <img src="gift.png">
+        <img src="images/gift.png">
             <section class="prayers">
                 prayers
             </section>
@@ -137,41 +137,50 @@
     </section>
     <section id="messages" class="messages">
        <section class="messages-title">Congratulatory <br> Messages</section> 
-       <section class="message-content">Congratulatory Messages to be displayed here</section> 
+       <div>
+       <div class="prev" onclick="slideControl(-1)">Prev &#10094;</div>
+       <div class="next" onclick="slideControl(1)">&#10095; Next</div>
+        <div class="message-container">
+                <section class="message-content">
+                    <div class="sender">Sender:</div>
+                    <div class="theMessage">Congratulatory Messages to be displayed here</div>
+                </section> 
+        </div>
+       </div> 
     </section>
 
     <section id="special-thanks" class="thanks">
        <section class="section-title">Special Thanks</section> 
         
-           <section class="thank-you"><img src="thanks.png" alt="thankyou" /> We would love to Thank God for this union and pray that his hand always remains in our family </section> 
-            <section class="thank-you"> <img src="thanks.png" alt="thankyou" />We would love to thank our parents for their support in planning this beautiful day. 
+           <section class="thank-you"><img src="/images/thanks.png" alt="thankyou" /> We would love to Thank God for this union and pray that his hand always remains in our family </section> 
+            <section class="thank-you"> <img src="/images/thanks.png" alt="thankyou" />We would love to thank our parents for their support in planning this beautiful day. 
                 May God bless and replenish you in every way possible. </section> 
-            <section class="thank-you"> <img src="thanks.png" alt="thankyou" /> We would love to thank you all for joining us as we celebrate this new and exciting phase in our sectionves</section>
+            <section class="thank-you"> <img src="/images/thanks.png" alt="thankyou" /> We would love to thank you all for joining us as we celebrate this new and exciting phase in our sectionves</section>
     </section>
 
     <section id="contact" class="contacts">
       <section class="contact-title">Contact</section> 
       <section>
-        <img src="info.png" alt="contact us" style="height: 200px; width: 200px; margin: 50px"/>
+        <img src="images/info.png" alt="contact us" style="height: 200px; width: 200px; margin: 50px"/>
       </section>
         <div class="rsvp"> 
             RSVP
         </div> 
         <div class="contact-phone">
         <section>
-            <img src="old-typical-phone.png" alt="phone" />
+            <img src="images/old-typical-phone.png" alt="phone" />
           <a href="tel:09033141664" > 09033141664</a>  
         </section>
         <section>
-          <img src="whatsapp.png" alt="phone" />
+          <img src="images/whatsapp.png" alt="phone" />
           <a href="tel:09033141664" > WhatsApp</a>  
         </section>
         <section>
-          <img src="gmail.svg" alt="email" />
+          <img src="images/gmail.svg" alt="email" />
           <a href="mailto:lindaezenwammadu@yahoo.com" > Email</a>  
         </section>
         <section>
-          <img src="web-link.png" alt="website" />
+          <img src="images/web-link.png" alt="website" />
           <a href="https://linktr.ee/lindaezenwammadu" target="_blank" > linktree</a>  
         </section>
         </div>
